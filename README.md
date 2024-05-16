@@ -1,63 +1,34 @@
+# SmartPlants 🪴
+With this project you can measure the aridity of your plants at home. With a microcontroller you can send measurements directly to the InfluxDB and visualize the data using Grafana. 
 
-![Logo](https://user-images.githubusercontent.com/64506580/159311466-f720a877-6c76-403a-904d-134addbd6a86.png)
+## Prerequisites
+- Microcontroller (e.g. ESP 8266)
+- Humidity sensor (e.g. Capacitive soil moisture sensor v1.2)
+- Docker & Docker Compose
+- Arduino Software
+- Access to a small server (e.g. Raspberry PI or NVIDIA Jetson Nano)
 
-
-# Telegraf, InfluxDB, Grafana (TIG) Stack
-
-Gain the ability to analyze and monitor telemetry data by deploying the TIG stack within minutes using [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
-
-
-
-
-## ⚡️ Getting Started
-
-Clone the project
-
-```bash
-git clone https://github.com/huntabyte/tig-stack.git
+## Setup & Installation
+First connect the humidity sensor to your microcontroller using the analog `A0` pin on the board.
+After finishing the hardware setup you can now configure the InfluxDB and Grafana using the `.env` file in this repository.
+Additionally you have to setup your Wifi connection and ip address in the `SmartPlants.ino` file. Make sure that the configurations of your InfluxDB match both in the SmartPlants.ino and .env file. 
+Run docker with:
+```docker
+docker compose up
 ```
 
-Navigate to the project directory
+With the Arduino Software or the common extension in VS Code you can flash the `SmartPlants.ino` file to your microcontroller.
+After flashing the software you should see the value of the humitity sensor on the serial monitor. 
 
-```bash
-cd tig-stack
-```
+## Finished
+Now you can setup dashboards and panals to visualize your data in Grafana. You can access InfluxDB and Grafana with your ip address and port `8086` for InfluxDB and `3000` for Grafana. You can change the ports in the configuration file if you want.
+My hardware setup looks like this:
 
-Change the environment variables define in `.env` that are used to setup and deploy the stack
-```bash
-├── telegraf/
-├── .env         <---
-├── docker-compose.yml
-├── entrypoint.sh
-└── ...
-```
+![Logo](./static/aufbau.jpeg)
 
-Customize the `telegraf.conf` file which will be mounted to the container as a persistent volume
+I hope you enjoy the project! 🤗 If you have more questions about the project, feel free to contact me. 😁
 
-```bash
-├── telegraf/
-│   ├── telegraf.conf <---
-├── .env
-├── docker-compose.yml
-├── entrypoint.sh
-└── ...
-```
+## Credits
+This project is based on the [docker stack](https://github.com/huntabyte/tig-stack) from @huntabyte and has the MIT license.
 
-Start the services
-```bash
-docker-compose up -d
-```
-## Docker Images Used (Official & Verified)
-
-[**Telegraf**](https://hub.docker.com/_/telegraf) / `1.19`
-
-[**InfluxDB**](https://hub.docker.com/_/influxdb) / `2.1.1`
-
-[**Grafana-OSS**](https://hub.docker.com/r/grafana/grafana-oss) / `8.4.3`
-
-
-
-## Contributing
-
-Contributions are always welcome!
 

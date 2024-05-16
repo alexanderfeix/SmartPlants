@@ -14,12 +14,12 @@ ESP8266WiFiMulti wifiMulti;
 #include <InfluxDbClient.h>
 #include <InfluxDbCloud.h>
 
-#define WIFI_SSID "FRITZ!Box 7530 SW"
+#define WIFI_SSID "FRITZ!Box ..."
 #define WIFI_PASSWORD "PASSWORD"
-#define INFLUXDB_URL "http://192.168.178.80:8086/"
-#define INFLUXDB_USERNAME "home-assistant"
-#define INFLUXDB_PASSWORD "thereturnnothing"
-#define INFLUXDB_ORG "home-assistant"
+#define INFLUXDB_URL "http://IP-ADDRESS:8086/"
+#define INFLUXDB_USERNAME "admin"
+#define INFLUXDB_PASSWORD "admin"
+#define INFLUXDB_ORG "smart-plants"
 #define TZ_INFO "CET-1CEST,M3.5.0,M10.5.0/3"
 
 #define LED_PIN     5
