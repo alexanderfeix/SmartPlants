@@ -25,7 +25,7 @@ Now you can setup dashboards and panals to visualize your data in Grafana. You c
 
 My hardware setup looks like this:
 
-<img src=".static/aufbau.jped" alt="Hardware-Setup" width="50%"/>
+<img src="./static/aufbau.jped" alt="Hardware-Setup" width="50%"/>
 
 I hope you enjoy the project! 🤗 If you have more questions about the project, feel free to contact me. 😁
 
