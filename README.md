@@ -20,11 +20,12 @@ docker compose up
 With the Arduino Software or the common extension in VS Code you can flash the `SmartPlants.ino` file to your microcontroller.
 After flashing the software you should see the value of the humitity sensor on the serial monitor. 
 
-## Finished
+## Finished 🥳
 Now you can setup dashboards and panals to visualize your data in Grafana. You can access InfluxDB and Grafana with your ip address and port `8086` for InfluxDB and `3000` for Grafana. You can change the ports in the configuration file if you want.
+
 My hardware setup looks like this:
 
-![Logo](./static/aufbau.jpeg)
+<img src=".static/aufbau.jped" alt="Hardware-Setup" width="50%"/>
 
 I hope you enjoy the project! 🤗 If you have more questions about the project, feel free to contact me. 😁
 
