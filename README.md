@@ -1,5 +1,5 @@
 # SmartPlants 🪴
-With this project you can measure the aridity of your plants at home. With a microcontroller you can send measurements directly to the InfluxDB and visualize the data using Grafana. 
+This project lets you monitor plant soil moisture at home. A microcontroller sends measurements directly to an InfluxDB which can be visualized in Grafana.
 
 ## Prerequisites
 - Microcontroller (e.g. ESP 8266)
